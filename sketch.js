@@ -14,15 +14,15 @@ function setup() {
 	engine = Engine.create();
 	world = engine.world;
 
-	ground=createSprite(width/2,600,width,5);
+	ground=createSprite(width/2,height-50,width,5);
 
-	paper=new Papper(200,200,20);
+	paper=new Papper(200,650,20);
 	
 	
 
-	box1=createSprite(400,height-50,200,20);
+	box1=createSprite(600,height-50,200,20);
 	 box1.shapeColor="red";
-	 box2=createSprite(300,height-90,20,100);
+	 box2=createSprite(700,height-90,20,100);
 	 box2.shapeColor="red";
 	 box3=createSprite(500,height-90,20,100);
 	 box3.shapeColor="red";
@@ -34,11 +34,17 @@ function setup() {
 
 function draw() {
 
-  background(100);
+  background(0);
   Engine.update(engine);
   paper.display();
   drawSprites();
  
+}
+function keypressed(){
+	if(keycode===32){
+		Matter.Body.applyForce(paper.Bodies,paper.Bodies.position,{x:85,y:-85});
+
+	}
 }
 
 
