@@ -1,21 +1,22 @@
-class Papper{
-    constructor(x,y,radius){
+class dustbin{
+    constructor(x,y,width,height){
         var options ={
-            isStatic:false,
+            isStatic:true,
              restitution:0.5,
              density:1.2,
              friction:0.5,
         }
-        this.body= Bodies.circle(x,y,radius,options);
-        this.radius=radius;
+        this.body= Bodies.rectangle(x,y,width,height,options);
+        this.width=width;
+        this.height=height;
         World.add(world,this.body);
         }
         
         display(){
          var posx=this.body.position.x
          var posy=this.body.position.y
-         ellipseMode(CENTER);
-         ellipse(posx,posy,this.radius,this.radius);
+         rectMode(CENTER);
+         rect(posx,posy,this.width,this.height);
 
         }
 }
