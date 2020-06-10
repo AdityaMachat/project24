@@ -42,7 +42,8 @@ function draw() {
 }
 function keypressed(){
 	if(keycode===32){
-		Matter.Body.applyForce(paper.Bodies,paper.Bodies.position,{x:85,y:-85});
+		isStatic=false;
+		Matter.Body.applyForce(paper.body,paper.body.position,{x:85,y:-85});
 
 	}
 }
