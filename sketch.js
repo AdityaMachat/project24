@@ -23,16 +23,17 @@ function setup() {
 
 function draw() {
   background(0);
-  Engine.update(engine);
+  
   paper.display();
   box1.display();
   box2.display();
   box3.display();
   ground.display(); 
 }
-function keypressed(){
-	if(keycode === UP_ARROW){
-		Matter.Body.applyForce(paper.body,paper.body.position,{x:170,y:-170});
+function keyPressed(){
+	if(keyCode === UP_ARROW){
+		Matter.Body.applyForce(paper.body,paper.body.position,{x:45,y:-65});
+		console.log(paper.Body)
 
 	}
 }
