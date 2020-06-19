@@ -8,14 +8,15 @@ class Papper{
         }
         this.body= Bodies.circle(x,y,radius,options);
         this.radius=radius;
+        this.image=loadImage("paper.png");
         World.add(world,this.body);
         }
         
         display(){
          var posx=this.body.position.x
          var posy=this.body.position.y
-         ellipseMode(CENTER);
-         ellipse(posx,posy,this.radius,this.radius);
+         imageMode(CENTER);
+         image(this.image,posx,posy,this.radius,this.radius);
 
         }
 }
