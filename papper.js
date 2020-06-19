@@ -8,7 +8,7 @@ class Papper{
         }
         this.body= Bodies.circle(x,y,radius,options);
         this.radius=radius;
-        this.image=loadImage("paper.png");
+        this.image=loadImage("Untitled.png");
         World.add(world,this.body);
         }
         
@@ -16,7 +16,7 @@ class Papper{
          var posx=this.body.position.x
          var posy=this.body.position.y
          imageMode(CENTER);
-         image(this.image,posx,posy,this.radius,this.radius);
+         image(this.image,posx,posy,this.radius+30,this.radius+30);
 
         }
 }
