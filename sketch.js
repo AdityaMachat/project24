@@ -28,8 +28,9 @@ function draw() {
   box1.display();
   box2.display();
   box3.display();
-  box4.display();
   paper.display();
+  box4.display();
+
   ground.display(); 
 }
 function keyPressed(){
